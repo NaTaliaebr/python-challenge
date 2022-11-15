@@ -1,5 +1,5 @@
-import os
 import csv
+import os
 
 months = []
 p = []
@@ -45,16 +45,16 @@ print(f"Greatest Descrease in Profits: {months[p.index(max(p))]} (${min_p})")
 
 
 output_file = 'Analysis/financial_analysis.txt'
-with open(output_file, "w", newline="")as text_file:
-    my_output = f'{total_months} and {net_total}'
-    text_file.write(my_output)
-    # csvwriter = csv.writer("budget_data")
-    # csvwriter.writerow(["Financial Analysis"])
-    # csvwriter.writerow("----------------------")
-    # csvwriter.writerow([f"Total Months: {total_months}"])
-    # csvwriter.writerow([f"Total: ${net_total}"])
-    # csvwriter.writerow([f'Greatest Increase in Profits: {months[p.index(max(p))]}  (${max_p})'])
-    # csvwriter.writerow([f"Greatest Decrease in Profits: {months[p.index(min(p))]}  ($(min_p)"])
+with open(output_file, "w", newline="")as csv_file:
+    
+    csvwriter = csv.writer(csv_file, delimiter=',')
+    csvwriter.writerow(["Financial Analysis"])
+    csvwriter.writerow("----------------------")
+    csvwriter.writerow([f"Total Months: {total_months}"])
+    csvwriter.writerow([f"Average Change : ${round(average_net_change/2)}"])
+    csvwriter.writerow([f"Total: ${net_total}"])
+    csvwriter.writerow([f'Greatest Increase in Profits: {months[p.index(max(p))]}  (${max_p})'])
+    csvwriter.writerow([f"Greatest Decrease in Profits: {months[p.index(min(p))]}  (${min_p})"])
 
 
 

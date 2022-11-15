@@ -1,1 +1,7 @@
-my data86 and 22564198
+Financial Analysis
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Total Months: 86
+Average Change : $-4156
+Total: $22564198
+Greatest Increase in Profits: Mar-13  ($978586)
+Greatest Decrease in Profits: Dec-10  ($-408383)
